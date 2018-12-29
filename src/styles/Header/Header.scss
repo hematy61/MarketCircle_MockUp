@@ -1,0 +1,177 @@
+.header {
+  border: 3px solid red;
+  padding: 1rem 1rem 0 1rem;
+}
+.header_content {
+  border: 3px solid blue;
+  display: flex;
+  height: 8rem;
+  width: 100%;
+}
+.header_brand {
+  border: 3px solid green;
+  background-image: url('LoremIpsum.png');
+  background-color: #cccccc69;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 9rem;
+  width: 40%;
+  height: 16rem;
+  z-index: 1;
+}
+.nav_hamburger_container{
+  width: 60%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+.header_button {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  // border: 3px solid orange;
+  background: #69ab49;
+  color: white;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  height: 40%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+// ---------------------------------------------------------
+// Nav bar -------------------------------------------------
+// ---------------------------------------------------------
+
+// ********** shaping nav bar and hiding it on page load ***********
+.header_nav{
+  display: unset;
+  transform: rotate(0deg) scale(1, 0);
+  position: fixed;
+  top: 9rem;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  background: #fbf8f8;
+  z-index: 1002;
+  overflow: scroll;
+  transform-origin: 0% 0%;
+  transition: all .5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  // remove blinking effect on safari when user clicks on cross lines
+  -webkit-tap-highlight-color: transparent;
+  a {
+    color: #a29d9d;
+    padding: 2rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+  }
+}
+
+// ********** changing hided nav bar to be shown when hamburger 
+// icon was clicked  ******************************************
+.header_nav_isOpen {
+  transform: none;
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  padding: 2rem;
+}
+.activeLink{
+  border-bottom: 1px solid rgb(45, 71, 45);
+}
+// ---------------------------------------------------------
+// Hamburger Menu ------------------------------------------
+// ---------------------------------------------------------
+
+// ********** positioning hamburger menu icon ***********
+.hamburger_icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid grey;
+  padding: 1rem;
+  z-index: 1;
+  width: 20%;
+}
+// ********** shaping hamburger menu with spans ***********
+.hamburger_icon span {
+  display: block;
+  width: 34px;
+  height: 5px;
+  margin-bottom: 5px;
+  background: #a29d9d;
+  position: relative;
+  border-radius: 3px;
+  transition: transform 0.4s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+
+// handle closing nav bar when cross sign clicked clicked
+
+.close{
+  span{
+    opacity: 1;
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+  span:nth-child(2) {
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .header_brand {
+    background-image: url('LoremIpsum@2x.png');
+    background-size: 17rem;
+    width: 30%;
+  }
+
+  .nav_hamburger_container {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .hamburger_icon {
+    display: none;
+  }
+  .header_button {
+    width: 15%;
+  }
+  .header_nav, .header_nav_isOpen {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transform: none;
+    position: unset;
+    top: unset;
+    right: unset;
+    bottom: unset;
+    width: 50%;
+    background: unset;
+    z-index: unset;
+    overflow: unset;
+    transform-origin: unset;
+    transition: none;
+    padding: unset;
+    // remove blinking effect on safari when user clicks on cross lines
+    -webkit-tap-highlight-color: unset;
+  }
+  .header_nav {
+    a:hover{
+      background: #69ab49;
+      color: white;
+      border-radius: 5px;
+    }
+  }
+}
+
