@@ -1,22 +1,24 @@
 .header {
-  border: 3px solid red;
+  // border: 3px solid red;
   padding: 1rem 1rem 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .header_content {
-  border: 3px solid blue;
+  // border: 3px solid blue;
   display: flex;
   height: 8rem;
   width: 100%;
 }
 .header_brand {
-  border: 3px solid green;
+  // border: 3px solid green;
   background-image: url('LoremIpsum.png');
-  background-color: #cccccc69;
+  background-color: #cccccc00;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 9rem;
   width: 40%;
-  height: 16rem;
+  height: 17rem;
   z-index: 1;
 }
 .nav_hamburger_container{
@@ -31,7 +33,7 @@
   justify-content: center;
   align-items: center;
 }
-button {
+.header_button button {
   // border: 3px solid orange;
   background: #69ab49;
   color: white;
@@ -95,7 +97,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 3px solid grey;
+  // border: 3px solid grey;
   padding: 1rem;
   z-index: 1;
   width: 20%;
@@ -133,7 +135,8 @@ button {
   .header_brand {
     background-image: url('LoremIpsum@2x.png');
     background-size: 17rem;
-    width: 30%;
+    width: 45%;
+    height: 18rem;
   }
 
   .nav_hamburger_container {
