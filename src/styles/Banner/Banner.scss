@@ -1,6 +1,6 @@
 .intro_container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 10rem auto;
 }
 
 .banner_container {
@@ -64,16 +64,14 @@
       margin-top: 3rem;
     }
     h3, p {
-      width: 50%;
+      width: 47%;
     }
     h3 {
       font-size: 3rem;
       font-weight: 400;
-      margin-right: 2rem;
     }
     p {
       font-size: 2rem;
-      margin-left: 2rem;
       line-height: 2.5rem;
     }
     button {
